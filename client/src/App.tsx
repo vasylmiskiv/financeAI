@@ -17,7 +17,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/predictions" element={<div>predicton page</div>} />
+              <Route path="/predictions" element={<div>prediction page</div>} />
             </Routes>
           </Box>
         </ThemeProvider>
