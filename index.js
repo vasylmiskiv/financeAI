@@ -29,7 +29,7 @@ app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
 
-const PORT = process.env.PORT | 5001;
+const PORT = process.env.PORT | 8080;
 
 mongoose
   .connect(process.env.MONGO_URL, {

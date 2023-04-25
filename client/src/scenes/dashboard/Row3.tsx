@@ -44,7 +44,7 @@ const Row3 = () => {
   const productColumns = [
     {
       field: "_id",
-      headerName: "id",
+      headerName: "ID",
       flex: 1,
     },
     {
@@ -64,7 +64,7 @@ const Row3 = () => {
   const transactionColumns = [
     {
       field: "_id",
-      headerName: "id",
+      headerName: "ID",
       flex: 1,
     },
     {
@@ -199,15 +199,12 @@ const Row3 = () => {
             width="40%"
           ></Box>
         </Box>
-        <Typography margin="0 1rem" variant="h6">
+        <Typography margin="0 1rem" variant="h5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
           facilisis diam velit, ut fringilla ex tempor faucibus. Aliquam
           lobortis aliquam tempus. Curabitur at aliquam elit. Morbi dignissim
           enim sit amet diam dignissim, vel vulputate tortor varius. Nam ac
           justo ut enim faucibus convallis. Sed dictum ac est in dignissim.
-          Maecenas luctus finibus orci eu faucibus. Praesent nulla dolor,
-          tristique ac porttitor ut, efficitur laoreet mi. Integer sagittis ante
-          vel arcu dignissim, eget faucibus odio finibus.
         </Typography>
       </DashboardBox>
     </>
