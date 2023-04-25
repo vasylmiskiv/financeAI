@@ -146,19 +146,19 @@ const Row2 = () => {
             <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
               83
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h6">
               Finance goals of the campaign that is desired
             </Typography>
           </Box>
           <Box flexBasis="40%">
-            <Typography variant="h4">Losses in Revenue</Typography>
-            <Typography variant="h5" mt="0.4rem">
+            <Typography variant="h5">Losses in Revenue</Typography>
+            <Typography variant="h6" mt="0.4rem">
               Losses are down 25%
             </Typography>
-            <Typography mt="0.4rem" variant="h4">
+            <Typography mt="0.4rem" variant="h5">
               Profit margins
             </Typography>
-            <Typography variant="h5" mt="0.4rem">
+            <Typography variant="h6" mt="0.4rem">
               Margins are up by 30% from last month
             </Typography>
           </Box>
