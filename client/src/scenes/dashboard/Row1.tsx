@@ -54,7 +54,7 @@ const Row1 = () => {
         return {
           name: month.substring(0, 3),
           revenue,
-          profit: (revenue - expenses).toFixed(2),
+          profit: (Number(revenue) - Number(expenses)).toFixed(2),
         };
       })
     );
@@ -74,10 +74,10 @@ const Row1 = () => {
             height={400}
             data={revenueExpenses}
             margin={{
-              top: 15,
-              right: 25,
-              left: -10,
-              bottom: 60,
+              top: 36,
+              right: 18,
+              left: 6,
+              bottom: 75,
             }}
           >
             <defs>
@@ -109,12 +109,12 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               tickLine={false}
               axisLine={{ strokeWidth: "0" }}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
               domain={[8000, 23000]}
             />
             <Tooltip />
@@ -149,36 +149,36 @@ const Row1 = () => {
             height={400}
             data={revenueProfit}
             margin={{
-              top: 20,
-              right: 0,
-              left: -10,
-              bottom: 55,
+              top: 36,
+              right: 10,
+              left: 6,
+              bottom: 75,
             }}
           >
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               yAxisId="left"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <Tooltip />
             <Legend
               height={20}
               wrapperStyle={{
-                margin: "0 0 10px 0",
+                margin: "30px 30px 0px 0px",
               }}
             />
             <Line
@@ -208,10 +208,10 @@ const Row1 = () => {
             height={300}
             data={revenue}
             margin={{
-              top: 17,
-              right: 15,
-              left: -5,
-              bottom: 58,
+              top: 36,
+              right: 16,
+              left: 10,
+              bottom: 75,
             }}
           >
             <defs>
@@ -233,12 +233,12 @@ const Row1 = () => {
               dataKey="name"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <Tooltip />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />

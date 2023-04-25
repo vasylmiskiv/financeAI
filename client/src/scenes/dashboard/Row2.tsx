@@ -73,31 +73,31 @@ const Row2 = () => {
           <LineChart
             data={operationalExpenses}
             margin={{
-              top: 20,
-              right: 0,
-              left: -10,
-              bottom: 55,
+              top: 36,
+              right: 10,
+              left: 6,
+              bottom: 60,
             }}
           >
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <XAxis
               dataKey="name"
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               yAxisId="left"
               orientation="left"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
             />
             <Tooltip />
             <Line
@@ -142,21 +142,23 @@ const Row2 = () => {
             </Pie>
           </PieChart>
           <Box ml="-0.7rem" flexBasis="40%" textAlign="center">
-            <Typography variant="h5">Target Sales</Typography>
+            <Typography variant="h4">Target Sales</Typography>
             <Typography m="0.3rem 0" variant="h3" color={palette.primary[300]}>
               83
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h5">
               Finance goals of the campaign that is desired
             </Typography>
           </Box>
           <Box flexBasis="40%">
-            <Typography variant="h5">Losses in Revenue</Typography>
-            <Typography variant="h6">Losses are down 25%</Typography>
-            <Typography mt="0.4rem" variant="h5">
+            <Typography variant="h4">Losses in Revenue</Typography>
+            <Typography variant="h5" mt="0.4rem">
+              Losses are down 25%
+            </Typography>
+            <Typography mt="0.4rem" variant="h4">
               Profit margins
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h5" mt="0.4rem">
               Margins are up by 30% from last month
             </Typography>
           </Box>
@@ -180,7 +182,7 @@ const Row2 = () => {
               name="price"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
               tickFormatter={(v: string) => `$${v}`}
             />
             <YAxis
@@ -189,7 +191,7 @@ const Row2 = () => {
               name="expense"
               axisLine={false}
               tickLine={false}
-              style={{ fontSize: "10px" }}
+              label={{ fontSize: "10px" }}
               tickFormatter={(v: string) => `$${v}`}
             />
             <ZAxis type="number" range={[20]} />

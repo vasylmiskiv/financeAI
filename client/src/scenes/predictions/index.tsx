@@ -25,11 +25,9 @@ const Predictions = () => {
     if (!kpiData) return [];
     const monthData = kpiData[0].monthlyData;
 
-    const formatted: Array<DataPoint> = monthData.map(
-      ({ revenue }, i: number) => {
-        return [i, revenue];
-      }
-    );
+    const formatted: any = monthData.map(({ revenue }, i: number) => {
+      return [i, revenue];
+    });
     const regressionLine = regression.linear(formatted);
 
     return monthData.map(({ month, revenue }, i: number) => {
@@ -74,13 +72,13 @@ const Predictions = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke={palette.grey[800]} />
-          <XAxis dataKey="name" tickLine={false} style={{ fontSize: "12px" }}>
+          <XAxis dataKey="name" tickLine={false} label={{ fontSize: "12px" }}>
             <Label value="Month" offset={-5} position="insideBottom" />
           </XAxis>
           <YAxis
             domain={[12000, 26000]}
             axisLine={{ strokeWidth: "0" }}
-            style={{ fontSize: "12px" }}
+            label={{ fontSize: "12px" }}
             tickFormatter={(v) => `$${v}`}
           >
             <Label

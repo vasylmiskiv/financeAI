@@ -8,12 +8,14 @@ import morgan from "morgan";
 import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
 import transactionRoutes from "./routes/transaction.js";
-import KPI from "./models/KPI.js";
-import Product from "./models/Product.js";
-import Transaction from "./models/Transaction.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 /* imported data for seeder*/
-import { kpis, products, transactions } from "./data/data.js";
+// import { kpis, products, transactions } from "./data/data.js";
+// import KPI from "./models/KPI.js";
+// import Product from "./models/Product.js";
+// import Transaction from "./models/Transaction.js";
 
 dotenv.config();
 const app = express();
@@ -25,11 +27,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+const PORT = process.env.PORT | 8080;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 app.use("/kpi", kpiRoutes);
 app.use("/product", productRoutes);
 app.use("/transaction", transactionRoutes);
 
-const PORT = process.env.PORT | 8080;
+app.use(express.static(path.join(__dirname, "client/dist")));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
+});
 
 mongoose
   .connect(process.env.MONGO_URL, {
